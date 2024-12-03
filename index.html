@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./desktop_version/index.css">
+    <link rel="stylesheet" href="./desktop_version/framework.css">
+    <link rel="stylesheet" href="./mobile_version/media_queries.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leon Template</title>    
+   
+</head>
+<body> 
+    <script>
+//scroll
+function scrollTop(){
+    scroll({top:0, behavior:"smooth"})
+}
+        // toggle switch
+function handleToggleSwitch(elmt){
+    elmt.firstElementChild.classList.toggle('toggle-switch-txt-active')
+    elmt.classList.toggle('toggle-switch-active')
+}
+
+function insertInBage(id){
+    let elmt = document.getElementById(id);
+    elmt.classList.toggle('out');
+}
+// night mode
+let flag_nigth =false
+function night(){
+    flag_nigth =! flag_nigth
+    let root = document.querySelector(':root');
+    let imgs = Array.from(document.images)
+    if(flag_nigth){
+        root.style.setProperty('--main', '#728285');
+        root.style.setProperty('--second', '#0b1f23');
+        root.style.setProperty('--local-txt', 'white');
+        imgs.map((imge)=> imge.classList.add('dark'))
+    }
+    else{
+        root.style.setProperty('--main', '#e9e9e9');
+        root.style.setProperty('--second', 'rgb(240, 233, 224)');
+        root.style.setProperty('--local-txt', 'black');
+        imgs.map((imge)=> imge.classList.remove('dark') )
+    }
+
+}
+
+    </script>
+    <!-- page container -->
+    <div class="page">
+
+        <!-- navbar -->
+        <nav id="nav" class="out">
+
+            <div class="controls center-h">
+
+                <span >Night Mode</span>
+                <div class="toggle-switch" onclick="handleToggleSwitch(this);night()">
+                    <div class="txt-swt fas fa-power-off"></div>
+                </div>
+
+            </div>
+
+            <!-- navbar links  -->
+            <div class="links center-h">
+
+                <div class="item"><a href="#services">Services</a></div class="item">
+                <div class="item"><a href="#portfospano">Portfospano</a></div class="item">
+                <div class="item"><a href="#about">About</div class="item">
+                <div class="item"><a href="#contact">Contact</a></div class="item">
+
+            </div><!-- navbar links  -->
+    
+        </nav><!-- navbar -->
+
+        <!-- header section -->
+        <header>
+            
+            <div class="head-1">
+                <img  src="asserts/logo.png" alt="logo-leon">
+                <div class="button">
+                    <span class="btn"></span>
+                    <span class="btn btn-c"></span>
+                    <span class="btn"></span>
+                </div>
+            </div>
+
+            <div class="head-2">
+                <img src="asserts/landing.jpg" >
+                <div class="content">
+                <p class="title">Hello There</p>
+                <p class="para center-hor " data-wow-duration="5s" data-wow-offset="10" >We are Leon - Super Creative & <br>Minimal Agency Web Template</p>
+                </div>
+            </div>
+
+        </header><!-- header section  -->
+
+
+        <main>
+
+            <div class="content-1">
+
+                <div class="card">
+                    <div class="fas fa-magic fa-3x"></div>
+                    <p class="title">Tell Us Your Idea</p>
+                    <div class="para center-h">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem distinctio libero ipsam fuga impedit omnis mollitia eos illum odit cum!  </div>
+                </div>
+
+                <div class="card" data-aos="zoom-out-down">
+                    <div class="far fa-gem fa-3x"></div>
+                    <p class="title">We Will Do All The Work</p>
+                    <div class="para center-h">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim mollitia nihil cupiditate iusto ipsa? Atque iste hic eos optio dolores?</div>
+                </div>
+
+                <div class="card">
+                    <div class="fas fa-globe-asia fa-3x"></div>
+                    <p class="title">Your Product is Worldwide</p>
+                    <div class="para center-h">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique corporis architecto totam delectus amet provident blanditiis tenetur</div>
+                </div>
+            </div>
+
+
+            <div id="services"  class="content-2 padding">
+
+                <div class="top">
+                    <p class="txt-l" data-aos="zoom-in-down">Services</p>
+                    <p class="txt-s">Don't be busy, be productive</p>
+                </div>
+
+                <div class="bottom">
+
+                    <div class="left">
+                        <div class="card">
+                            <div class="left-c fas fa-palette fa-2x"></div>
+                            <div class="right-c">
+                                <div class="title">
+                                    Graphic Design
+                                </div>
+                                <div class="para"> Graphic design is the process of visual communication and problem-solving using one or more of typography, photography and illustration.</div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="left-c fas fa-vector-square fa-2x"></div>
+                            <div class="right-c">
+                                <div class="title">
+                                    Web Design
+                                </div>
+                                <div class="para"> Web design encompasses many different skills and disciplines in the production and maintenance of websites.</div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="left-c fab fa-sketch fa-2x"></div>
+                            <div class="right-c">
+                                <div class="title">
+                                    UI & UX
+                                    </div>
+                                <div class="para">Process of enhancing user satisfaction with a product by improving the usability, accessibility, and pleasure provided in the interaction.</div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="left-c fas fa-pencil-ruler fa-2x"></div>
+                            <div class="right-c">
+                                <div class="title">
+                                    Web Development
+                                </div>
+                                <div class="para"> Web development is a broad term for the work involved in developing a web site for the Internet or an intranet.</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="right">
+                        <img src="./asserts/services.jpg" alt="services photo">
+                        <div class="squre"></div>
+                    </div>
+                
+                </div>
+
+            </div>
+
+            <div id="portfolio" class="content-3 padding">
+
+                <p class="txt-l" data-aos="zoom-in-down">Portfolio</p>
+                <p class="txt-s">If you do it right, it will last forever.</p>
+
+                <div class="contain center-h">
+
+                    <div class="card">
+                        <img src="./asserts/portfolio-1.jpg" alt="Project-icon">
+                        <p class="title">Project Here</p>
+                        <p class="para">My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="./asserts/portfolio-2.jpg" alt="Project-icon">
+                        <p class="title">Project Here</p>
+                        <p class="para">My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="./asserts/portfolio-3.jpg" alt="Project-icon">
+                        <p class="title">Project Here</p>
+                        <p class="para">My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="about" class="content-4 padding">
+                <p class="txt-l" data-aos="zoom-in-down">About</p>
+                <p class="txt-s">Less is more work</p>
+                <div class="contain center-h">
+                    <div class="photo"  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"> 
+                        <img src="./asserts/about.jpg" alt="about-icon">
+                    </div>
+
+                    <div class="text" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nemo neque voluptate tempora velit cum non, fuga vitae architecto delectus sed maxime rerum impedit aliquam obcaecati, aut excepturi iusto laudantium!
+                        <br>
+                        <br>
+                        <hr>
+                        <br>
+                        <br>
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sapiente. Velit iure exercitationem dolores nesciunt dolore. Eum officiis dolorum hic voluptate quaerat minima, similique inventore esse, alias, sed quo officia?
+                    </div>
+                </div>
+            </div>
+            <div id='contact' class="content-5 padding">
+                <p class="txt-l" data-aos="zoom-in-down">Contact</p>
+                <p class="txt-s">We are born to create</p>
+                <p>Feel free to drop us a line at:</p>
+                <a id='mail-link' href="mailto:leonagency@mail.com?subject=Contact">leonagency@mail.com</a>
+                <span>            Find Us On Social Networks
+                    <a href="https://www.youtube.com"><span><i class="fab fa-youtube"></i></span></a>
+                    <a href="https://www.facebook.com"><span><i class="fab fa-facebook-f"></i></span></a>
+                    <a href="https://www.twitter.com"><span><i class="fab fa-twitter"></i></span></a>
+                </span>
+            </div>
+        </main>
+        <footer>
+            <p>© 2021 <span class="word"> Leon</span>  All Right Reserved</p>
+        </footer>
+    </div>
+
+    <!-- dynamic elemnts -->
+    <div id="scroll-btn" onclick="scrollTop();"><i class="fas fa-arrow-alt-circle-up"></i></div>
+    <script src="./index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>

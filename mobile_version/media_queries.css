@@ -1,0 +1,53 @@
+@media screen and (max-width: 600px){
+    ::-webkit-scrollbar{
+        width: 0px;
+    }
+    /*top menu*/
+
+    .head-1{
+        width: 100vw;
+    }
+    /*content-1*/
+    .content-1{
+        flex-direction: column;
+    }
+    .content-1 .card{
+        margin: 5vh;
+    }
+    /*content-2*/
+    /* .content-2 .bottom{
+        flex-direction: column;
+        background-color: azure;
+    }
+    .content-2 .card{
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        width: 80wv;
+    }
+    .content-2 .bottom .right {
+        display: none;
+    } */
+    /*content-4 */
+    .content-4 .contain {
+        flex-direction: column;
+    }
+    .content-4 .contain .photo{
+
+        margin-bottom: 10px;
+    }
+    .content-4 .contain img::after{
+        content: "yyyyyyyyyy";
+        position: absolute;
+        top: 0px;
+        left: 60px;
+        background-color: var(--main-2-color);
+        height: 100%;
+        width: 20px;
+    }
+}
+@media screen and (max-width: 340px){
+    .head-2 .para{
+        font-size: 20px;
+    }
+}
